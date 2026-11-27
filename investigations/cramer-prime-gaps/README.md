@@ -4,6 +4,8 @@ GitHoobar · 27 November 2026 · Research note developed with OpenAI Codex and L
 
 Cramér's prime-gap conjecture asks whether some constant $C$ satisfies $p_{n+1}-p_n\le C(\log p_n)^2$ for all sufficiently large $n$. We attempted both directions. The conjecture remains open. Our definite finding concerns version 9 of Cheng-Ting Wang's *On Maximal Prime Gaps*, dated 23 November 2026. Its proof of Theorem 2.6 uses two estimates for adjacent gaps. Each estimate fails by an unbounded factor on actual primes. We derive this from earlier theorems of Baker–Freiberg and Pintz. [Wang, version 9, §2](https://arxiv.org/html/2605.14871v9) · [Formal Conjectures target](https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/CramerConjecture.lean#L89) · [Our attempts on the conjecture](approaches.md)
 
+We also determined how many joint probabilities guarantee square-logarithmic gaps in a model that removes multiples of small primes. An unconditional counting argument for ordinary primes shows that term-by-term relative estimates fail before that order. [Sieved model and actual-prime obstruction](wheel-threshold.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.

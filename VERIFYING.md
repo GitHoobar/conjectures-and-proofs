@@ -21,9 +21,10 @@ python3 -B results/covering-systems/third-order/coverage_bound.py 15015
 python3 -B investigations/hofstadter-modular/check.py
 python3 -B investigations/bjorner-kl-realization/check.py
 python3 -B investigations/cramer-prime-gaps/check.py
+python3 -B investigations/cramer-prime-gaps/check-wheel.py
 ```
 
-For the illustrative odd period 15015, the coverage bound leaves at least 2905 residues uncovered. The Hofstadter and Kazhdan–Lusztig scripts check examples of the accompanying structural arguments. The Cramér script checks a proposed proof's intermediate inequalities and the finite combinatorial identities used in our attempt.
+For the illustrative odd period 15015, the coverage bound leaves at least 2905 residues uncovered. The Hofstadter and Kazhdan–Lusztig scripts check examples of the accompanying structural arguments. The Cramér scripts check counterexamples, finite polynomial identities, exact joint probabilities under the interpolated count law, and residue counts over full sieve periods.
 
 ## Lean
 
@@ -41,6 +42,7 @@ From the root of this repository:
 collection_dir="$(pwd)"
 formal_dir="$(cd ../formal-conjectures && pwd)"
 (cd "$formal_dir" && lake env lean "$collection_dir/investigations/cramer-prime-gaps/Counterexamples.lean")
+(cd "$formal_dir" && lake env lean "$collection_dir/investigations/cramer-prime-gaps/WheelMoments.lean")
 (cd "$formal_dir" && lake env lean "$collection_dir/results/signed-cycle-vectors/Dimension.lean")
 (cd "$formal_dir" && lake env lean "$collection_dir/results/union-determinant/UnionDeterminant.lean")
 (cd "$formal_dir" && lake env lean "$collection_dir/results/union-determinant/UnionMobius.lean")
