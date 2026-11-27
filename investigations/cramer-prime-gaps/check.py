@@ -48,3 +48,24 @@ for i, j in combinations(range(4), 2):
     assert sum(row[i] and row[j] for row in rows) == 1
 assert sum(not any(row) for row in rows) >= 4
 print("Bonferroni identities and the pairwise-independent example passed.")
+
+
+def endpoint_kernel(h, r, t, y):
+    # Expand the terms of degree at most r in (1-w)^y (1+t*w)^(h-y).
+    return sum(
+        (-1)**hits * comb(y, hits) * comb(h - y, misses) * t**misses
+        for hits in range(min(r, y) + 1)
+        for misses in range(min(r - hits, h - y) + 1)
+    )
+
+
+for h, r, rho in [(6, 2, Fraction(1, 3)), (10, 3, Fraction(1, 5))]:
+    t = rho / (1 - rho)
+    k = sum(comb(h, j) * t**j for j in range(r + 1))
+    assert endpoint_kernel(h, r, t, 0) == k
+    expectation = sum(
+        comb(h, y) * rho**y * (1 - rho)**(h - y) * endpoint_kernel(h, r, t, y)**2
+        for y in range(h + 1)
+    )
+    assert expectation == k
+print("Endpoint polynomial squared averages agree with the exact binomial law.")

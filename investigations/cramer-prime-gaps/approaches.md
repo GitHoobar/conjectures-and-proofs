@@ -28,6 +28,18 @@ Indeed, for $y>0$ the truncated alternating sum is $\binom{y-1}{r}$ by Pascal's 
 
 There is an exact obstruction to using a small number of independent-model moments alone. Take a prime $H<q\le2H$, choose $k$ with $1\le k\le H$, and sample a uniform polynomial over the field of $q$ elements of degree less than $k$. At $H$ distinct coordinates record whether its value lies in a fixed set of size $\lfloor q/\log X\rfloor$. The indicators are $k$-wise independent by polynomial interpolation. Yet the event of a constant polynomial with value outside that set has probability $(1-\lfloor q/\log X\rfloor/q)q^{1-k}$. It gives an empty window. When $k=o(\log X/\log\log X)$ this lower bound is $X^{-o(1)}$, much larger than the $1/X$ scale needed to eliminate a possible exceptional start using its expected count. Arithmetic of actual primes could give information beyond these moments. [Exact finite example](check.py)
 
+### A positive polynomial that detects an empty interval
+
+The alternating sum suggests a sharper attempt. Take $X$ large, $H=\lceil16\log^2 X\rceil$, $r=\lceil\log X\rceil$, $\rho=1/\log X$ and $t=\rho/(1-\rho)$. Define $Q_r(y)$ to be the sum of the coefficients through degree $r$ of
+$$(1-w)^y(1+tw)^{H-y}.$$
+At zero this equals $K=\sum_{j=0}^r\binom Hj t^j$. The term at $j=r$ is at least $(H\rho/r)^r\ge8^r>X^2$ for large $X$. Here $\binom Hr\ge(H/r)^r$ follows by multiplying $(H-i)/(r-i)\ge H/r$ for $0\le i<r$.
+
+For independent Bernoulli bits of mean $\rho$, write $Y$ for their sum. In the generating product each coordinate contributes $1+wU_i$, with $U_i=-1$ on a hit and $U_i=t$ otherwise. These centered variables satisfy $\mathbb E U_i^2=t$. Distinct squarefree monomials in the $U_i$ are orthogonal, so $\mathbb E[Q_r(Y)^2]=K$ exactly. This is the endpoint reproducing kernel for binomial orthogonal polynomials, expressed by a coefficient formula.
+
+For actual prime counts **one arithmetic estimate would suffice**:
+$$\frac1X\sum_{X\le x<2X} Q_r(Y_x)^2\ \le\ X K.$$
+Indeed, every empty interval contributes $K^2$ to the sum of squares. The estimate bounds their number by $X^2/K<1$. If it held for every sufficiently large dyadic $X$, Cramér would follow by taking $x=p_n$. This criterion allows a factor $X$ over the independent-model second moment. What is missing is a uniform upper bound for this particular nonnegative polynomial average on actual primes. Its expansion reaches prime tuples of length $2\lceil\log X\rceil$. Replacing individual terms by independent probabilities fails even at two consecutive offsets, which cannot both be prime in these windows. The following script checks the polynomial identity against the exact binomial law for a finite sample of parameters. [Exact check](check.py)
+
 ## What can zero locations alone detect?
 
 Here is a test of an attempted explicit-formula proof. Start with all ordinary primes and remove those in $(X_j,X_j+\lfloor\log^3 X_j\rfloor]$, with $X_j=2^{2^j}$ for $j\ge4$. Denote the retained set by $S$. The number of deletions up to $x$ is $O(\log^3(2x))$, by summing a geometric series in $(\log X_j)^3$. Thus $S$ is infinite by the prime number theorem. The gaps of $S$ across the deleted windows have unbounded ratio to the square of the logarithm of their left endpoint. The Chebyshev function counting powers of retained primes differs from the ordinary $\psi(x)$ by $O(\log^4(2x))$, since each deleted prime contributes at most $\log x$ in total.
