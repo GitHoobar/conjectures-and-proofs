@@ -22,6 +22,8 @@ We can also identify every prime in the exact interval by using a separate zero 
 
 We tested how much the many overlapping windows inside one gap improve a moment bound. In many disjoint blocks of actual primes, sliding the window attains every count in a fixed range below the mean. Those nonempty windows force a contribution of $X^{1-o(1)}$ to any normalized squared count-polynomial sum of degree $o(\log X)$, even with separate polynomials per block. [Exact counts and the degree obstruction](count-polynomials.md)
 
+We characterized which positions can become the sole prime in a translate that retains an original prime divisor at every other position. At least half qualify at every sufficiently large start. Inside the original interval, a quantitative sieve bound shows how many positions lose every original divisor under any nonzero polynomially bounded shift. [Divisor-preserving translates and the fixed-interval estimate](divisor-preserving-translates.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.

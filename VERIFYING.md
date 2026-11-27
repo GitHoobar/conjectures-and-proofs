@@ -26,6 +26,7 @@ python3 -B investigations/cramer-prime-gaps/check-rough.py
 python3 -B investigations/cramer-prime-gaps/check-prime-rows.py
 python3 -B investigations/cramer-prime-gaps/check-alignment.py
 python3 -B investigations/cramer-prime-gaps/check-count-polynomials.py
+python3 -B investigations/cramer-prime-gaps/check-divisor-translates.py
 python3 -B investigations/cramer-prime-gaps/check-deficit.py
 python3 -B investigations/cramer-prime-gaps/check-far-pairs.py
 ```
