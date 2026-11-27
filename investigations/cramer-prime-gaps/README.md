@@ -34,6 +34,8 @@ Isolating one interior start with a single rational Fourier sum at the interpola
 
 For smaller moduli each progression visits many starts. Divisor switching and Bombieri–Vinogradov evaluate the average contribution from all the other starts to absolute error tending to zero. Adding the expected count to the averaged progression discrepancy then recovers the target count by rounding, even at the sparsest start. A lower bound on that discrepancy remains open. [Prime counts at the other starts](switched-progressions.md)
 
+An integer-multiplicity Euler product can match the zeta zeros in the right half-plane, its residue and any fixed finite number of Laurent coefficients while having infinitely many gaps longer than the square-logarithmic scale. Its generalized integers obey an exact divisor identity and have count $t+O_\epsilon(t^\epsilon)$. A test of the functional equation at heights up to $\sqrt X$ detects the changes in the selected intervals. [Divisor identity, pole coefficients and the functional equation](euler-multiplicities.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
