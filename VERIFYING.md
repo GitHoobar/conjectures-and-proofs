@@ -22,9 +22,10 @@ python3 -B investigations/hofstadter-modular/check.py
 python3 -B investigations/bjorner-kl-realization/check.py
 python3 -B investigations/cramer-prime-gaps/check.py
 python3 -B investigations/cramer-prime-gaps/check-wheel.py
+python3 -B investigations/cramer-prime-gaps/check-rough.py
 ```
 
-For the illustrative odd period 15015, the coverage bound leaves at least 2905 residues uncovered. The Hofstadter and Kazhdan–Lusztig scripts check examples of the accompanying structural arguments. The Cramér scripts check counterexamples, finite polynomial identities, exact joint probabilities under the interpolated count law, and residue counts over full sieve periods.
+For the illustrative odd period 15015, the coverage bound leaves at least 2905 residues uncovered. The Hofstadter and Kazhdan–Lusztig scripts check examples of the accompanying structural arguments. The Cramér scripts check counterexamples, finite polynomial identities, exact joint probabilities under the interpolated count law, and residue counts over full sieve periods. The rough-number script checks complete and incomplete period counts, the two inclusion–exclusion bounds, and the companion polynomial identity using exact arithmetic. The growing-order estimates and covering-product corollary have written proofs.
 
 ## Lean
 

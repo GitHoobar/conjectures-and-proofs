@@ -6,6 +6,8 @@ Cramér's prime-gap conjecture asks whether some constant $C$ satisfies $p_{n+1}
 
 We also determined how many joint probabilities guarantee square-logarithmic gaps in a model that removes multiples of small primes. An unconditional counting argument for ordinary primes shows that term-by-term relative estimates fail before that order. [Sieved model and actual-prime obstruction](wheel-threshold.md)
 
+For actual integer intervals of square-logarithmic length, we derive a bound on the exceptional starts where primes below a growing cutoff can divide every entry. The proof also gives a lower bound on the product of prime divisors needed to cover a typical interval. A companion note identifies the exact estimate still needed for ordinary primes. [Rough numbers and covering products](rough-intervals.md) · [Prime-count criterion](vacancy-test.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
