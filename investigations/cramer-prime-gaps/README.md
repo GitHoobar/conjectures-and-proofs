@@ -24,6 +24,8 @@ We tested how much the many overlapping windows inside one gap improve a moment 
 
 We characterized which positions can become the sole prime in a translate that retains an original prime divisor at every other position. At least half qualify at every sufficiently large start. Inside the original interval, a quantitative sieve bound shows how many positions lose every original divisor under any nonzero polynomially bounded shift. [Divisor-preserving translates and the fixed-interval estimate](divisor-preserving-translates.md)
 
+Using the September 2026 Jacobsthal survivor theorem, we derived a logarithmic-power saving over its stated uniform bound for arbitrary prime sets. In a prime-free window this gives a lower bound on the number of distinct large least prime factors. A signed weight cancels semiprimes and detects a single actual prime if it is positive. Proving that sign at every start remains open. [Large divisor classes and the signed test](large-divisor-classes.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
