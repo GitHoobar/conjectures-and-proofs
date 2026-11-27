@@ -26,6 +26,8 @@ We characterized which positions can become the sole prime in a translate that r
 
 Using the September 2026 Jacobsthal survivor theorem, we derived a logarithmic-power saving over its stated uniform bound for arbitrary prime sets. In a prime-free window this gives a lower bound on the number of distinct large least prime factors. A signed weight cancels semiprimes and detects a single actual prime if it is positive. Proving that sign at every start remains open. [Large divisor classes and the signed test](large-divisor-classes.md)
 
+At every start attaining the minimum prime count in a dyadic range, a fraction tending to one of the sieve survivors are composites that escape the near-square factor searches analyzed here. A separate count over the whole range locates the multiplier scale required even for products of two comparable primes. [Near-square factorizations in the sparsest window](near-square-factors.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
