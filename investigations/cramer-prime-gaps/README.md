@@ -10,6 +10,8 @@ For actual integer intervals of square-logarithmic length, we derive a bound on 
 
 We then tested actual prime counts after fixing congruences on the start. For any given start, many other starts match all the prescribed residue answers and have a prime in their window. The proof gives the allowable number of prime moduli. A separate construction shows how a long gap can escape all of these estimates. [Actual primes after fixing congruences](primes-in-residue-classes.md)
 
+We next examined consecutive starts. Fixed fractional deficits in prime counts can persist on a whole run at the Cramér scale. In some deficient runs every window shares actual primes. A finite sum over zeta zeros tests for a prime at a specified start, and a higher cutoff resolves primes exactly on the right endpoint. We bound its truncation error and prove a matching cutoff order for uniform suppression by positive smoothing kernels. [Aligned windows](aligned-windows.md) · [Pointwise zero-sum test](finite-zero-test.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
