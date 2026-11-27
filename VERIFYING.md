@@ -30,6 +30,7 @@ python3 -B investigations/cramer-prime-gaps/check-divisor-translates.py
 python3 -B investigations/cramer-prime-gaps/check-large-divisor-classes.py
 python3 -B investigations/cramer-prime-gaps/check-near-square-factors.py
 python3 -B investigations/cramer-prime-gaps/check-rational-window-weights.py
+python3 -B investigations/cramer-prime-gaps/check-two-moduli.py
 python3 -B investigations/cramer-prime-gaps/check-deficit.py
 python3 -B investigations/cramer-prime-gaps/check-far-pairs.py
 ```

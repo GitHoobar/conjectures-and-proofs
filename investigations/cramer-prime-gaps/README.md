@@ -30,6 +30,8 @@ At every start attaining the minimum prime count in a dyadic range, a fraction t
 
 Using Dirichlet GRH, we obtained a positive prime-count lower bound for every square of a Fourier sum with rational frequencies of denominator at most $X^{1/8}$. These inequalities survive deletion of every prime in a single interval of length $X^{7/8}$. We also give the interpolation level at which the infimum of the weighted averages equals the actual minimum count. [Rational weights and empty windows](rational-window-weights.md)
 
+Isolating one interior start with a single rational Fourier sum at the interpolation level requires exponentially large coefficients. Two congruence indicators isolate that same start with bounded coefficients. An absent residue class gives an exact lower bound on the error of the complete-residue comparison, and correcting the class frequencies leaves a common prime-count error across the modulus pairs. [Two moduli at one start](two-moduli-at-one-start.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
