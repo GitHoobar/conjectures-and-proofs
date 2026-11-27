@@ -51,25 +51,38 @@ def prime(n):
     return n >= 2 and all(n % p != 0 for p in range(2, isqrt(n)+1))
 
 
-def score_interval(y, b, g, m, argument_scale=Q(1)):
-    # The computation of the score uses primes only through y.
+def scaled_moment_bounds(y, b, degree, argument_scale=Q(1)):
+    # Entry k-1 encloses b^(2k) R_y(2k) at unit argument scale.
     initial = [p for p in range(2, y+1) if prime(p)]
-    poly = coefficients(m)
-    assert value(poly, Q(1)) == 1
-    normal = value(poly, Q(b, b-g)**2)
     lo_pi, hi_pi = pi_interval()
-    assert hi_pi**2*b*b/(6*m**4*normal) < Q(1, 4)
-    bern = bernoullis(2*(len(poly)-1))
-    lower = upper = Q(0)
-    for k, c in enumerate(poly[1:], 1):
+    bern = bernoullis(2*degree)
+    bounds = []
+    for k in range(1, degree+1):
         s = 2*k
         rational = abs(bern[s])*2**(s-1)/factorial(s)
         rational *= prod(1-Q(1, p**s) for p in initial)
-        factor = c*b**s/normal
-        endpoints = [factor*(rational*argument_scale**k*pival**s-1)
-                     for pival in (lo_pi, hi_pi)]
+        bounds.append(tuple(b**s*(rational*argument_scale**k*pival**s-1)
+                            for pival in (lo_pi, hi_pi)))
+    return bounds
+
+
+def integrate(poly, bounds):
+    lower = upper = Q(0)
+    assert poly[0] == 0 and len(bounds) == len(poly)-1
+    for c, pair in zip(poly[1:], bounds):
+        endpoints = [c*point for point in pair]
         lower += min(endpoints)
         upper += max(endpoints)
+    return lower, upper
+
+
+def score_interval(y, b, g, m, argument_scale=Q(1)):
+    poly = coefficients(m)
+    assert value(poly, Q(1)) == 1
+    normal = value(poly, Q(b, b-g)**2)
+    assert pi_interval()[1]**2*b*b/(6*m**4*normal) < Q(1, 4)
+    bounds = scaled_moment_bounds(y, b, len(poly)-1, argument_scale)
+    lower, upper = integrate([c/normal for c in poly], bounds)
     assert upper-lower < Q(1, 1000)
     return lower, upper
 
@@ -90,3 +103,18 @@ for y, b, g, m in ((13, 16, 0, 8), (13, 17, 0, 9), (13, 19, 0, 9),
         assert score_interval(y, b, g, m, 1-eta)[1] < Q(1, 2)
         assert score_interval(y, b, g, m, 1+eta)[0] > Q(1, 2)
 print("Certified empty and occupied windows, guarded tests, and both sides of the nearby polynomial threshold.")
+
+# Certify a Rayleigh quotient above (p/(p+1))^2 on the p-rescaled support.
+# An independent prime check then verifies the integer recovered by the bound.
+for y, p, m in ((5, 7, 4), (8, 11, 4), (12, 13, 4)):
+    trial_squared = square(coefficients(m)[1:])
+    rho = Q(p, p+1)**2
+    # Sum v(v-rho)Q(v)^2 with respect to counting measure.
+    poly = [Q(0)]*(len(trial_squared)+2)
+    for j, c in enumerate(trial_squared):
+        poly[j+1] -= rho*c
+        poly[j+2] += c
+    bounds = scaled_moment_bounds(y, p, len(poly)-1)
+    assert integrate(poly, bounds)[0] > 0
+    assert next(n for n in range(y+1, p+1) if prime(n)) == p
+print("Certified next-prime upper bounds below p+1 by rational Rayleigh inequalities.")

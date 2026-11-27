@@ -38,6 +38,8 @@ An integer-multiplicity Euler product can match the zeta zeros in the right half
 
 The ordinary even zeta values and primes through the left endpoint suffice to test whether a specified window contains a prime. We derive a sharp degree bound for polynomial tests that budget the contribution of every exterior integer, and a lower bound from the ordinary primes in more distant intervals. That lower bound falls short of the threshold at the sparsest start. [Testing a specified interval using even zeta values](even-zeta-window.md)
 
+Optimizing over all polynomial weights in the even-moment matrix gives an upper bound for the next prime. We bound its distance from the start in a range covered by short-interval theorems, and its approximation error relative to the unknown next prime at larger degrees. A separate construction preserves the lower even moments while deleting a window from a real-weighted Euler product on ordinary prime bases. [The joint even moments and the next prime](joint-even-moments.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
