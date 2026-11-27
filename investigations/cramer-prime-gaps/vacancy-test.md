@@ -14,7 +14,7 @@ Indeed, each empty interval contributes one. The combined contribution of the ot
 
 **Proposition.** Cramér's conjecture is equivalent to the existence of fixed $C,K>0$ such that this sum is at most $Kh$ for all sufficiently large dyadic $X$.
 
-Under the conjecture, the gap following the last prime at or before $x$ has length $O(\log^2(3X))$ uniformly in the indicated range. Choose $C$ large enough that every interval contains a prime. Then the upper bound holds with $K=1$. Conversely take a prime $p\in[X,2X)$. If its next gap exceeds $(K+2)h$, the starts $p,p+1,\ldots,p+\lfloor(K+1)h\rfloor$ all have empty windows and all lie in $[X,3X)$ for large $X$. Their contributions alone exceed $Kh$. This proves the equivalence. The outstanding step is to bound this sum for actual primes.
+Under the conjecture, the gap following the last prime at or before $x$ has length $O(\log^2(3X))$ uniformly in the indicated range. Choose $C$ large enough that every interval contains a prime. Then the upper bound holds with $K=1$. Conversely take a prime $p\in[X,2X)$. If its next gap exceeds $(K+2)h$, the starts $p,p+1,\ldots,p+\lfloor(K+1)h\rfloor$ all have empty windows and all lie in $[X,3X)$ for large $X$. Their contributions alone exceed $Kh$. This proves the equivalence. The outstanding step is to bound this sum for actual primes. Our follow-up gives a bound in every class of a suitable modulus and measures exactly how a long gap can escape such classwise estimates. [Testing exceptional starts](primes-in-residue-classes.md)
 
 ## What the squared polynomial forces
 

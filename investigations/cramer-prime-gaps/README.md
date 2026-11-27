@@ -8,6 +8,8 @@ We also determined how many joint probabilities guarantee square-logarithmic gap
 
 For actual integer intervals of square-logarithmic length, we derive a bound on the exceptional starts where primes below a growing cutoff can divide every entry. The proof also gives a lower bound on the product of prime divisors needed to cover a typical interval. A companion note identifies the exact estimate still needed for ordinary primes. [Rough numbers and covering products](rough-intervals.md) · [Prime-count criterion](vacancy-test.md)
 
+We then tested actual prime counts after fixing congruences on the start. For any given start, many other starts match all the prescribed residue answers and have a prime in their window. The proof gives the allowable number of prime moduli. A separate construction shows how a long gap can escape all of these estimates. [Actual primes after fixing congruences](primes-in-residue-classes.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
