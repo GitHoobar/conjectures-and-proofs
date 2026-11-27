@@ -32,6 +32,8 @@ Using Dirichlet GRH, we obtained a positive prime-count lower bound for every sq
 
 Isolating one interior start with a single rational Fourier sum at the interpolation level requires exponentially large coefficients. Two congruence indicators isolate that same start with bounded coefficients. An absent residue class gives an exact lower bound on the error of the complete-residue comparison, and correcting the class frequencies leaves a common prime-count error across the modulus pairs. [Two moduli at one start](two-moduli-at-one-start.md)
 
+For smaller moduli each progression visits many starts. Divisor switching and Bombieri–Vinogradov evaluate the average contribution from all the other starts to absolute error tending to zero. Adding the expected count to the averaged progression discrepancy then recovers the target count by rounding, even at the sparsest start. A lower bound on that discrepancy remains open. [Prime counts at the other starts](switched-progressions.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
