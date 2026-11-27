@@ -28,6 +28,8 @@ Using the September 2026 Jacobsthal survivor theorem, we derived a logarithmic-p
 
 At every start attaining the minimum prime count in a dyadic range, a fraction tending to one of the sieve survivors are composites that escape the near-square factor searches analyzed here. A separate count over the whole range locates the multiplier scale required even for products of two comparable primes. [Near-square factorizations in the sparsest window](near-square-factors.md)
 
+Using Dirichlet GRH, we obtained a positive prime-count lower bound for every square of a Fourier sum with rational frequencies of denominator at most $X^{1/8}$. These inequalities survive deletion of every prime in a single interval of length $X^{7/8}$. We also give the interpolation level at which the infimum of the weighted averages equals the actual minimum count. [Rational weights and empty windows](rational-window-weights.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
