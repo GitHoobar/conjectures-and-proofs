@@ -18,6 +18,8 @@ The independent Lean verification of Alpöge's RH proof removes the off-line ter
 
 At the exact midpoint of a square-logarithmic interval, we isolate a band of zero separations with upper cutoff proportional to $x/h$. Infinitely many intervals containing order $\log x$ primes already produce a large negative signed pair sum in this band. We transfer the pair sum to individual zeros with an explicit proper-power correction and bound the upper tail of the earlier detector. The remaining one-prime margin at the deepest interval is open. [Wide separations at a sparse interval](wide-separations.md)
 
+We can also identify every prime in the exact interval by using a separate zero sum at each integer coprime to a small primorial. The required maximum zero height is a vanishing fraction of the start. This includes a lone endpoint prime and distinguishes it from a proper power. The open step is to prove that at least one of the candidates passes the test at every start. [Sampling on the coprime residue classes](wheel-sampling.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.

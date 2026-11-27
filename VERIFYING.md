@@ -37,9 +37,12 @@ The alignment script exhausts marking patterns through length nine and checks th
 python3 -B investigations/cramer-prime-gaps/check-zero-sum.py /path/to/zeros1
 python3 -B investigations/cramer-prime-gaps/check-far-pairs.py /path/to/zeros1
 python3 -B investigations/cramer-prime-gaps/check-wide-band.py /path/to/zeros1
+python3 -B investigations/cramer-prime-gaps/check-wheel-sampling.py /path/to/zeros1
 ```
 
 The wide-band replay uses the compact Fourier transform of $(1-u^2)(\sin(u)/u)^8$ and the first two Taylor corrections for the Mellin weight. It compares a difference of scales with a directly sieved prime-power sum on four finite intervals, truncating the arithmetic kernel at log-distance $1/2$. Its residual includes the effects of the spatial truncation, Taylor approximation and rounded ordinates. It checks the single-zero calculation and power correction. The all-start bounds and pair-to-single-zero transfer in the [wide-separation note](investigations/cramer-prime-gaps/wide-separations.md) have written proofs.
+
+The wheel-sampling replay checks interpolation on residues modulo 2, 6 and 30 and reconstructs six von Mangoldt weights from the tabulated zeros, including primes, proper powers and a composite with distinct prime factors. Without the ordinate file it runs the interpolation checks alone. [Formula and error bounds](investigations/cramer-prime-gaps/wheel-sampling.md)
 
 ## Lean
 
