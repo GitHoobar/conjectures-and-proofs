@@ -25,11 +25,12 @@ python3 -B investigations/cramer-prime-gaps/check-wheel.py
 python3 -B investigations/cramer-prime-gaps/check-rough.py
 python3 -B investigations/cramer-prime-gaps/check-prime-rows.py
 python3 -B investigations/cramer-prime-gaps/check-alignment.py
+python3 -B investigations/cramer-prime-gaps/check-deficit.py
 ```
 
 For the illustrative odd period 15015, the coverage bound leaves at least 2905 residues uncovered. The Hofstadter and Kazhdan–Lusztig scripts check examples of the accompanying structural arguments. The Cramér scripts check counterexamples, finite polynomial identities, exact joint probabilities under the interpolated count law, and residue counts over full sieve periods. The rough-number script checks complete and incomplete period counts, the two inclusion–exclusion bounds, and the companion polynomial identity using exact arithmetic. The growing-order estimates and covering-product corollary have written proofs. The prime-row script checks the row and column counts for every eligible subset in its examples, handles gaps crossing the summation boundaries, and verifies the one-start-per-class deletion bound.
 
-The alignment script exhausts marking patterns through length nine and checks the inequalities for suffix maxima and overlapping windows. The optional floating-point replay uses the plain-text file of the first 100,000 positive zero ordinates from Andrew Odlyzko. From the repository root, run the following command with the path to the uncompressed file. [Odlyzko’s zero table](https://www-users.cse.umn.edu/~odlyzko/zeta_tables/)
+The alignment script exhausts marking patterns through length nine and checks the inequalities for suffix maxima and overlapping windows. The deficit script checks two pair-sum kernels, subwindow containment and the spacing argument for proper powers. The optional floating-point replay uses the plain-text file of the first 100,000 positive zero ordinates from Andrew Odlyzko. From the repository root, run the following command with the path to the uncompressed file. [Odlyzko’s zero table](https://www-users.cse.umn.edu/~odlyzko/zeta_tables/)
 
 ```sh
 python3 -B investigations/cramer-prime-gaps/check-zero-sum.py /path/to/zeros1

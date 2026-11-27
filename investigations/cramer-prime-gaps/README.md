@@ -12,6 +12,8 @@ We then tested actual prime counts after fixing congruences on the start. For an
 
 We next examined consecutive starts. Fixed fractional deficits in prime counts can persist on a whole run at the Cramér scale. In some deficient runs every window shares actual primes. A finite sum over zeta zeros tests for a prime at a specified start, and a higher cutoff resolves primes exactly on the right endpoint. We bound its truncation error and prove a matching cutoff order for uniform suppression by positive smoothing kernels. [Aligned windows](aligned-windows.md) · [Pointwise zero-sum test](finite-zero-test.md)
 
+We attacked the lower bound at the deepest deficit. The resulting inequality isolates a signed sum over widely separated zero ordinates and a possible contribution from high zeros to the right of the critical line. A comparison under RH with the extended pair-correlation function of Languasco, Perelli and Zaccagnini shows quantitatively why extrapolating its conjectured size down to a square-logarithmic window would fail. The universal prime certificate remains open. [Lower bound for a specified interval](deepest-deficit.md) · [Extended pair correlation and prior work](extended-pair-correlation.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
