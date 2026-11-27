@@ -36,7 +36,10 @@ The alignment script exhausts marking patterns through length nine and checks th
 ```sh
 python3 -B investigations/cramer-prime-gaps/check-zero-sum.py /path/to/zeros1
 python3 -B investigations/cramer-prime-gaps/check-far-pairs.py /path/to/zeros1
+python3 -B investigations/cramer-prime-gaps/check-wide-band.py /path/to/zeros1
 ```
+
+The wide-band replay uses the compact Fourier transform of $(1-u^2)(\sin(u)/u)^8$ and the first two Taylor corrections for the Mellin weight. It compares a difference of scales with a directly sieved prime-power sum on four finite intervals, truncating the arithmetic kernel at log-distance $1/2$. Its residual includes the effects of the spatial truncation, Taylor approximation and rounded ordinates. It checks the single-zero calculation and power correction. The all-start bounds and pair-to-single-zero transfer in the [wide-separation note](investigations/cramer-prime-gaps/wide-separations.md) have written proofs.
 
 ## Lean
 

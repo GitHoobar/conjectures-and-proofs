@@ -16,6 +16,8 @@ We attacked the lower bound at the deepest deficit. The resulting inequality iso
 
 The independent Lean verification of Alpöge's RH proof removes the off-line term above. We use RH to bound the signed far-pair sum at individual starts and on average in each sampled congruence class. A second filter resolves individual integers. For that filter a smoothed band of intermediate zero separations cancels pointwise to less than the effect of one prime. The larger separations still permit an empty window. [Signed bounds and RH record](signed-far-pairs.md) · [One-prime resolution and remaining obstruction](negative-far-pairs.md) · [MIT verification](https://math.mit.edu/~drew/grh/)
 
+At the exact midpoint of a square-logarithmic interval, we isolate a band of zero separations with upper cutoff proportional to $x/h$. Infinitely many intervals containing order $\log x$ primes already produce a large negative signed pair sum in this band. We transfer the pair sum to individual zeros with an explicit proper-power correction and bound the upper tail of the earlier detector. The remaining one-prime margin at the deepest interval is open. [Wide separations at a sparse interval](wide-separations.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
