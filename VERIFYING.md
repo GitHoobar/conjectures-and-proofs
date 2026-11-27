@@ -33,6 +33,7 @@ python3 -B investigations/cramer-prime-gaps/check-rational-window-weights.py
 python3 -B investigations/cramer-prime-gaps/check-two-moduli.py
 python3 -B investigations/cramer-prime-gaps/check-switched-progressions.py
 python3 -B investigations/cramer-prime-gaps/check-euler-multiplicities.py
+python3 -B investigations/cramer-prime-gaps/check-even-zeta-window.py
 python3 -B investigations/cramer-prime-gaps/check-deficit.py
 python3 -B investigations/cramer-prime-gaps/check-far-pairs.py
 ```

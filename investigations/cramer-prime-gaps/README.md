@@ -36,6 +36,8 @@ For smaller moduli each progression visits many starts. Divisor switching and Bo
 
 An integer-multiplicity Euler product can match the zeta zeros in the right half-plane, its residue and any fixed finite number of Laurent coefficients while having infinitely many gaps longer than the square-logarithmic scale. Its generalized integers obey an exact divisor identity and have count $t+O_\epsilon(t^\epsilon)$. A test of the functional equation at heights up to $\sqrt X$ detects the changes in the selected intervals. [Divisor identity, pole coefficients and the functional equation](euler-multiplicities.md)
 
+The ordinary even zeta values and primes through the left endpoint suffice to test whether a specified window contains a prime. We derive a sharp degree bound for polynomial tests that budget the contribution of every exterior integer, and a lower bound from the ordinary primes in more distant intervals. That lower bound falls short of the threshold at the sparsest start. [Testing a specified interval using even zeta values](even-zeta-window.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
