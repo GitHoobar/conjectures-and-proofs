@@ -20,6 +20,8 @@ At the exact midpoint of a square-logarithmic interval, we isolate a band of zer
 
 We can also identify every prime in the exact interval by using a separate zero sum at each integer coprime to a small primorial. The required maximum zero height is a vanishing fraction of the start. This includes a lone endpoint prime and distinguishes it from a proper power. The open step is to prove that at least one of the candidates passes the test at every start. [Sampling on the coprime residue classes](wheel-sampling.md)
 
+We tested how much the many overlapping windows inside one gap improve a moment bound. In many disjoint blocks of actual primes, sliding the window attains every count in a fixed range below the mean. Those nonempty windows force a contribution of $X^{1-o(1)}$ to any normalized squared count-polynomial sum of degree $o(\log X)$, even with separate polynomials per block. [Exact counts and the degree obstruction](count-polynomials.md)
+
 ## Two checks by hand
 
 Use Wang's one-based indexing $p_1=2$. Write $g_n=p_{n+1}-p_n$ and $A_j=(p_{j+1}-2)/j$, the average of the first $j$ gaps.
