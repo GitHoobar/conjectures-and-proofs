@@ -10,6 +10,7 @@ Give every edge of a complete graph a plus or minus sign. Count the cycles with 
 
 | Question | Result in this collection | Verification |
 |---|---|---|
+| [Consecutive runs in OEIS A345680](results/alternating-digit-squares/) | Every run length occurs among integers whose alternating sum of squared decimal digits eventually reaches zero under iteration. | Full Lean proof and a replayable kernel certificate. |
 | [Negative-cycle packing](results/signed-cycle-packing/) | Counterexamples to Zaslavsky's Conjecture 5.4⁻. A family of complete signed graphs has an exact quadratic gap between the conjectured and actual packing numbers. | Elementary proofs, attribution for the classical five-vertex obstruction, and an exhaustive check on five vertices. |
 | [Negative cycle vectors](results/signed-cycle-vectors/) | Proofs of Schaefer and Zaslavsky's dimension and indistinguishable-pair conjectures. An extension gives exponentially many indistinguishable signings. | Lean checks the full-span theorem on edge sets. Exact computations check the construction's finite certificates. |
 | [Gaussian large doubling](results/gaussian-doubling/) | For finite-entropy inputs with finite second moments and independent nondegenerate Gaussian noise, equality holds exactly for a Gaussian input with proportional covariance. The paper treats singular noise separately. | [Mathematical proof (PDF)](results/gaussian-doubling/gaussian-doubling-equality.pdf) |
