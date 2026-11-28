@@ -4,6 +4,8 @@ Run these commands from the root of this repository. The Python certificates use
 
 ## Signed graphs
 
+For the negative-cycle packing counterexamples, run `python3 -B results/signed-cycle-packing/check.py`. The output lists the negative packing number, frustration index, and unsigned packing number in that order. The expected triples are $(2,4,3)$, $(6,8,7)$, and $(108,144,117)$. [Proof and scope of the checks](results/signed-cycle-packing/)
+
 ```sh
 python3 -B results/signed-cycle-vectors/check.py
 c++ -std=c++17 -O2 results/signed-cycle-vectors/verify-multiplicity.cpp -o /tmp/verify-multiplicity
